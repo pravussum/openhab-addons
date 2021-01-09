@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config-description:config-descriptions
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:config-description="https://openhab.org/schemas/config-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/config-description/v1.0.0
+		https://openhab.org/schemas/config-description-1.0.0.xsd">
+	<config-description uri="io:metrics">
+		<parameter name="influxMetricsEnabled" type="boolean">
+			<label>Influx metrics</label>
+			<description>Enable the Influx (www.influxdata.com) metrics. Further configuration of the InfluxDB instance
+				necessary.</description>
+			<default>false</default>
+		</parameter>
+		<parameter name="influxURL" type="text">
+			<label>InfluxDB URL</label>
+			<description>The URL of the InfluxDB instance. Defaults to http://localhost:8086</description>
+			<default>http://localhost:8086</default>
+		</parameter>
+		<parameter name="influxDB" type="text">
+			<label>InfluxDB database name</label>
+			<description>The name of the database to use. Defaults to "openhab".</description>
+			<default>openhab</default>
+		</parameter>
+		<parameter name="influxUsername" type="text">
+			<label>InfluxDB user name</label>
+			<description>The InfluxDB user name (no default).</description>
+		</parameter>
+		<parameter name="influxPassword" type="text">
+			<label>InfluxDB password</label>
+			<description>The InfluxDB password (no default).</description>
+		</parameter>
+		<parameter name="influxUpdateIntervaleInSeconds" type="integer">
+			<label>InfluxDB update interval in seconds</label>
+			<description>Controls how often metrics are exported to InfluxDB (in seconds). Defaults to 300</description>
+			<default>300</default>
+		</parameter>
+	</config-description>
+</config-description:config-descriptions>
